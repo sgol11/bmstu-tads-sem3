@@ -5,6 +5,11 @@
 
 typedef enum { FALSE, TRUE } mybool;
 
+typedef struct {
+    int index;
+    int field;
+} key_t;
+
 typedef struct
 {
     int warranty;

@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "io_file.h": "c"
+        "io_file.h": "c",
+        "sort.h": "c"
     }
 }

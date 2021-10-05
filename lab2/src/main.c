@@ -4,6 +4,7 @@
 #include "../inc/io_file.h"
 #include "../inc/change_cars_num.h"
 #include "../inc/find.h"
+#include "../inc/sort.h"
 
 int main(void)
 {
@@ -16,6 +17,7 @@ int main(void)
     int choice = 1;
 
     car_t cars_table[MAX_CARS_NUM];
+    key_t keys_table[MAX_CARS_NUM];
     int n = 0;
 
     show_info();
@@ -39,6 +41,18 @@ int main(void)
                 break;
             case FIND:
                 find_in_table(cars_table, n);
+                break;
+            case SORT_KEYS:
+                sort_keys(cars_table, keys_table, n);
+                print_sorted_keys(keys_table, n);
+                break;
+            case SORT_TABLE:
+                print_sorted_table(cars_table, n);
+                break;
+            case SORT_TABLE_WITH_KEYS:
+                sort_keys(cars_table, keys_table, n);
+                print_sorted_keys(keys_table, n);
+                print_sorted_table_with_keys(cars_table, keys_table, n);
                 break;
             case NEW_INIT_TABLE:
                 err_code = download_table(file_name, cars_table, &n);
