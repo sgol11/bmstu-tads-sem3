@@ -48,9 +48,16 @@ int compare_keys(const key_t *key1, const key_t *key2)
     return key1->field - key2->field;
 }
 
-int print_sorted_table(car_t *cars, int n)
+int qsort_table(car_t *cars, int n)
 {
     qsort(cars, n, sizeof(car_t), (int(*)(const void *, const void *)) compare_cars);
+    
+    return OK;
+}
+
+int print_sorted_table(car_t *cars, int n)
+{
+    qsort_table(cars, n);
 
     printf("Отсортированная (по ценам) исходная таблица\n\n");
     print_table(cars, n);

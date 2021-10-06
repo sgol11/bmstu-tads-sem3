@@ -41,7 +41,7 @@ void choose_action(int *choice)
            " 9 - Вывести цены не новых машин указанной марки с одним предыдущим\n"
            "собственником и отсутствием ремонта, в указанном диапазоне цен\n"
            "10 - Выбрать новую исходную таблицу\n"
-           "11 - Выйти из программы\n"
+           " 0 - Выйти из программы\n"
            "\n");
     
     printf("Ваш выбор: ");
@@ -49,7 +49,7 @@ void choose_action(int *choice)
     char tmp[MAX_STR_LEN];
     char *tmp_p = fgets(tmp, MAX_STR_LEN, stdin);
 
-    while (tmp_p == NULL || (atoi(tmp) < 1 || atoi(tmp) > 11))
+    while (tmp_p == NULL || (atoi(tmp) < 0 || atoi(tmp) > 10) || (atoi(tmp) == 0 && tmp[0] != '0'))
     {
         printf(" Ошибка ввода: необходимо ввести номер одного из предложенных вариантов\n\n");
         printf("Ваш выбор: ");

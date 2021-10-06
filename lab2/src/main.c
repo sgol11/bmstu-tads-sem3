@@ -5,6 +5,7 @@
 #include "../inc/change_cars_num.h"
 #include "../inc/find.h"
 #include "../inc/sort.h"
+#include "../inc/analysis.h"
 
 int main(void)
 {
@@ -39,9 +40,6 @@ int main(void)
             case DEL:
                 delete_cars(file_name, cars_table, &n);
                 break;
-            case FIND:
-                find_in_table(cars_table, n);
-                break;
             case SORT_KEYS:
                 sort_keys(cars_table, keys_table, n);
                 print_sorted_keys(keys_table, n);
@@ -53,6 +51,15 @@ int main(void)
                 sort_keys(cars_table, keys_table, n);
                 print_sorted_keys(keys_table, n);
                 print_sorted_table_with_keys(cars_table, keys_table, n);
+                break;
+            case CMP_TABLE_AND_KEYS:
+                cmp_table_and_keys(cars_table, n);
+                break;
+            case CMP_SORT_METHODS:
+                cmp_sorts(cars_table, n);
+                break;
+            case FIND:
+                find_in_table(cars_table, n);
                 break;
             case NEW_INIT_TABLE:
                 err_code = download_table(file_name, cars_table, &n);

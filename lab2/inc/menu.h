@@ -13,7 +13,7 @@
 #define CMP_SORT_METHODS      8
 #define FIND                  9
 #define NEW_INIT_TABLE        10
-#define EXIT                  11
+#define EXIT                  0
 
 void show_info();
 void choose_action(int *choice);

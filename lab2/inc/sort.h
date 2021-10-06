@@ -15,6 +15,7 @@ void swap(key_t *key1, key_t *key2);
 int qsort_keys(key_t *keys, int n);
 int compare_keys(const key_t *key1, const key_t *key2);
 
+int qsort_table(car_t *cars, int n);
 int print_sorted_table(car_t *cars, int n);
 int compare_cars(const car_t *car1, const car_t *car2);
 
