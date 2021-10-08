@@ -1,4 +1,4 @@
-#include "../inc/find.h"
+#include "find.h"
 
 int find_in_table(car_t *cars, int n)
 {

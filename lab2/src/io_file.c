@@ -1,4 +1,4 @@
-#include "../inc/io_file.h"
+#include "io_file.h"
 
 int download_table(char *file_name, car_t *cars, int *n)
 {
@@ -23,6 +23,7 @@ int download_table(char *file_name, car_t *cars, int *n)
     }
     else if (strlen(file_name) == 1 && atoi(file_name) == 2)
     {
+        *n = 0;
         use_init_table = 0;
     }
 

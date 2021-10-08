@@ -1,4 +1,4 @@
-#include "../inc/sort.h"
+#include "sort.h"
 
 void sort_keys(car_t *cars, key_t *keys, int n)
 {
@@ -22,14 +22,14 @@ int bubble_sort_keys(key_t *keys, int n)
         for (int j = 0; j < n - i - 1; j++)
         {
             if (keys[j].field > keys[j + 1].field)
-                swap(&keys[j], &keys[j + 1]);
+                swap_keys(&keys[j], &keys[j + 1]);
         }
     }
 
     return OK;
 }
 
-void swap(key_t *key1, key_t *key2)
+void swap_keys(key_t *key1, key_t *key2)
 {
     key_t tmp = *key1;
     *key1 = *key2;
@@ -46,6 +46,27 @@ int qsort_keys(key_t *keys, int n)
 int compare_keys(const key_t *key1, const key_t *key2)
 {
     return key1->field - key2->field;
+}
+
+int bubble_sort_table(car_t *cars, int n)
+{
+    for (int i = 0; i < n - 1; i++)
+    {
+        for (int j = 0; j < n - i - 1; j++)
+        {
+            if (cars[j].price > cars[j + 1].price)
+                swap_table(&cars[j], &cars[j + 1]);
+        }
+    }
+
+    return OK;
+}
+
+void swap_table(car_t *car1, car_t *car2)
+{
+    car_t tmp = *car1;
+    *car1 = *car2;
+    *car2 = tmp;
 }
 
 int qsort_table(car_t *cars, int n)

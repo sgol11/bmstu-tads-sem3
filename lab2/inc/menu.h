@@ -9,8 +9,8 @@
 #define SORT_KEYS             4
 #define SORT_TABLE            5
 #define SORT_TABLE_WITH_KEYS  6
-#define CMP_TABLE_AND_KEYS    7
-#define CMP_SORT_METHODS      8
+#define ANALYSIS_CUR_TABLE    7
+#define FULL_ANALYSIS         8
 #define FIND                  9
 #define NEW_INIT_TABLE        10
 #define EXIT                  0

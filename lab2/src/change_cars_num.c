@@ -1,4 +1,4 @@
-#include "../inc/change_cars_num.h"
+#include "change_cars_num.h"
 
 int add_car(char *file_name, car_t *cars, int *n)
 {
@@ -63,7 +63,10 @@ int add_car(char *file_name, car_t *cars, int *n)
     
         FILE *f = fopen(file_name, "a+");
 
-        fprintf(f, "\n%s\n%s\n%d\n%s\n", car.brand, car.country, car.price, car.color);
+        if (*n > 1)
+            fprintf(f, "\n");
+        
+        fprintf(f, "%s\n%s\n%d\n%s\n", car.brand, car.country, car.price, car.color);
 
         if (car.is_new)
             fprintf(f, "%d\n", car.condition.new_car.warranty);

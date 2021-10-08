@@ -1,11 +1,11 @@
-#include "../inc/general.h"
-#include "../inc/menu.h"
-#include "../inc/structs.h"
-#include "../inc/io_file.h"
-#include "../inc/change_cars_num.h"
-#include "../inc/find.h"
-#include "../inc/sort.h"
-#include "../inc/analysis.h"
+#include "general.h"
+#include "menu.h"
+#include "structs.h"
+#include "io_file.h"
+#include "change_cars_num.h"
+#include "find.h"
+#include "sort.h"
+#include "analysis.h"
 
 int main(void)
 {
@@ -52,11 +52,11 @@ int main(void)
                 print_sorted_keys(keys_table, n);
                 print_sorted_table_with_keys(cars_table, keys_table, n);
                 break;
-            case CMP_TABLE_AND_KEYS:
-                cmp_table_and_keys(cars_table, n);
+            case ANALYSIS_CUR_TABLE:
+                analyse_cur_table(cars_table, n);
                 break;
-            case CMP_SORT_METHODS:
-                cmp_sorts(cars_table, n);
+            case FULL_ANALYSIS:
+                full_analysis();
                 break;
             case FIND:
                 find_in_table(cars_table, n);

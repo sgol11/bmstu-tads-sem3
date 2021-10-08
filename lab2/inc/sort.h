@@ -10,10 +10,13 @@ void sort_keys(car_t *cars, key_t *keys, int n);
 void form_keys_table(car_t *cars, key_t *keys, int n);
 
 int bubble_sort_keys(key_t *keys, int n);
-void swap(key_t *key1, key_t *key2);
+void swap_keys(key_t *key1, key_t *key2);
 
 int qsort_keys(key_t *keys, int n);
 int compare_keys(const key_t *key1, const key_t *key2);
+
+int bubble_sort_table(car_t *cars, int n);
+void swap_table(car_t *car1, car_t *car2);
 
 int qsort_table(car_t *cars, int n);
 int print_sorted_table(car_t *cars, int n);

@@ -1,4 +1,4 @@
-#include "../inc/get_vars.h"
+#include "get_vars.h"
 
 int fget_str(FILE *f, char *str)
 {

@@ -29,12 +29,12 @@ mileage = [i for i in range(20000, 200000, 1000)]
 repairs = [i for i in range(4)]
 owners = [i for i in range(4)]
 
-f = open('cars_table.txt', 'w')
 
-for i in range(100):
+def write_random_car(f):
+
     car_brand = random.choice(list(cars.keys()))
     car_country = cars[car_brand]
-
+    
     f.write('{}\n'.format(car_brand))
     f.write('{}\n'.format(car_country))
     f.write('{}\n'.format(random.choice(price)))
@@ -51,6 +51,12 @@ for i in range(100):
         f.write('{}\n'.format(random.choice(owners)))
 
     f.write('\n')
+
+
+f = open('cars_table.txt', 'w')
+
+for i in range(100):
+    write_random_car(f)
 
 for i in range(20):
     car_brand = random.choice(list(cars.keys()))
@@ -69,4 +75,14 @@ for i in range(20):
     f.write('\n')
 
 f.close()
+
+lines_num = [10, 50, 100, 200, 500]
+
+for num in lines_num:
+    f = open('analysis_data/{}.txt'.format(str(num)), 'w')
+
+    for i in range(num):
+        write_random_car(f)
+
+    f.close()
 
