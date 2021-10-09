@@ -12,7 +12,7 @@ int main(void)
     setbuf(stdout, NULL);
     setlocale(LC_ALL, "");
 
-    char file_name[MAX_STR_LEN] = "";
+    char file_name[100] = "";
 
     int err_code = OK;
     int choice = 1;
@@ -27,7 +27,7 @@ int main(void)
 
     while (choice != EXIT)
     {
-        choose_action(&choice);
+        choice = choose_action();
 
         switch (choice)
         {
@@ -52,11 +52,8 @@ int main(void)
                 print_sorted_keys(keys_table, n);
                 print_sorted_table_with_keys(cars_table, keys_table, n);
                 break;
-            case ANALYSIS_CUR_TABLE:
-                analyse_cur_table(cars_table, n);
-                break;
-            case FULL_ANALYSIS:
-                full_analysis();
+            case ANALYSIS:
+                analyse_table_sort(cars_table, n);
                 break;
             case FIND:
                 find_in_table(cars_table, n);

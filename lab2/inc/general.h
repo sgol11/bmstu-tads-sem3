@@ -8,8 +8,8 @@
 
 #define DEFAULT_FILE_NAME "data/cars_table.txt"
 
-#define MAX_STR_LEN 51
-#define MAX_CARS_NUM 500
+#define MAX_STR_LEN 16
+#define MAX_CARS_NUM 999
 
 #define OK 0
 #define ERR_CHOICE -1
@@ -20,5 +20,6 @@
 #define ERR_LONG_STR -6
 #define ERR_NEG_NUM -7
 #define ERR_MANY_CARS -8
+#define ERR_LONG_NUM -9
 
 #endif
