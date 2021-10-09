@@ -1,7 +1,0 @@
-{
-    "files.associations": {
-        "io_file.h": "c",
-        "sort.h": "c",
-        "find.h": "c"
-    }
-}
