@@ -1,8 +1,8 @@
 CC = gcc
 CFLAGS = -std=c99 -Wall -Werror -Wvla -pedantic
 
-OBJS = ./out/main.o ./out/analysis.o ./out/change_cars_num.o ./out/find.o ./out/get_vars.o \
-       ./out/io_file.o ./out/menu.o ./out/sort.o
+OBJS = ./out/main.o ./out/io.o ./out/memory_manager.o ./out/multi.o ./out/menu.o \
+       ./out/generate_matrix.o ./out/analysis.o
 
 INCS = $(wildcard ./inc/*.h) 
 
